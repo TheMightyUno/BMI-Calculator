@@ -1,0 +1,57 @@
+﻿<Window x:Class="BMI_Calculator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BMI_Calculator"
+        mc:Ignorable="d"
+        Title="BMI Calculator" Height="700" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width=".5*"/>
+            <!--For Margin-->
+            <ColumnDefinition Width="1*"/>
+            <!--Labels-->
+            <ColumnDefinition Width="1*"/>
+            <!--TextBox for User Input-->
+            <ColumnDefinition Width=".5*"/>
+            <!--For Margin-->
+            <ColumnDefinition Width="1*"/>
+            <!--Area to Display Results-->
+            <ColumnDefinition Width="1*"/>
+            <!--Area to Display Results-->
+            <ColumnDefinition Width="1*"/>
+            <!--Area to Display Results-->
+            <ColumnDefinition Width=".5*"/>
+            <!--For Margin-->
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height=".5*"/>
+            <!--For Margin-->
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="5*"/>
+            <!--For the Data Grid-->
+            <RowDefinition Height=".5*"/>
+            <!--For Margin-->
+        </Grid.RowDefinitions>
+        <Label Content="First Name:" Grid.Column="1" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+        <Label Content="Last Name:" Grid.Column="1" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="2" VerticalAlignment="Top"/>
+        <Label Content="Phone#:" Grid.Column="1" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="3" VerticalAlignment="Top"/>
+        <Label Content="Height Inches:" Grid.Column="1" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="4" VerticalAlignment="Top"/>
+        <Label Content="Weight Lbs:" Grid.Column="1" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="5" VerticalAlignment="Top"/>
+        <Label Content="Your BMI Is:" Grid.Column="4" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+        <TextBox x:Name="xFirstNameBox" Grid.ColumnSpan="2" Grid.Column="2" HorizontalAlignment="Left" Height="23" Margin="10,14,0,0" Grid.Row="1" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="xLastNameBox" Grid.ColumnSpan="2" Grid.Column="2" HorizontalAlignment="Left" Height="23" Margin="10,10,0,0" Grid.Row="2" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="xPhoneBox" Grid.ColumnSpan="2" Grid.Column="2" HorizontalAlignment="Left" Height="23" Margin="10,10,0,0" Grid.Row="3" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="xHeightInchesBox" Grid.ColumnSpan="2" Grid.Column="2" HorizontalAlignment="Left" Height="23" Margin="10,10,0,0" Grid.Row="4" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="xWeightLbsBox" Grid.ColumnSpan="2" Grid.Column="2" HorizontalAlignment="Left" Height="23" Margin="10,10,0,0" Grid.Row="5" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Width="120"/>
+        <TextBlock x:Name="xYourBMIResults" Grid.Column="4" HorizontalAlignment="Left" Grid.Row="2" Grid.RowSpan="2" TextWrapping="Wrap" Text="BMI Results" VerticalAlignment="Top"/>
+        <TextBlock x:Name="xBMIMessage" Grid.Column="4" HorizontalAlignment="Left" Grid.Row="4" TextWrapping="Wrap" Text="Message:" VerticalAlignment="Top"/>
+    </Grid>
+</Window>
