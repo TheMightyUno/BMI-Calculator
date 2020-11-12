@@ -20,9 +20,38 @@ namespace BMI_Calculator
     /// </summary>
     public partial class MainWindow : Window
     {
+
+        public class Customer
+        {
+            public string lastName { get; set; }
+            public string firstName { get; set; }
+            public string phoneNumber { get; set; }
+            public int heightInches { get; set; }
+            public int weightLbs { get; set; }
+            public int custBMI { get; set; }
+            public string statusTitle { get; set; }
+        }
+
+
+
         public MainWindow()
         {
             InitializeComponent();
         }
+        #region Part 1 of the Lab. ClearBtn & ExitBtn
+        private void ClearBtn_Click(object sender, RoutedEventArgs e)
+        {
+            xPhoneBox.Text = "";
+            xFirstNameBox.Text = "";
+            xLastNameBox.Text = "";
+            xHeightInchesBox.Text = "";
+            xHeightLbsBox.Text = "";
+        }
+
+        private void ExitBtn_Click(object sender, RoutedEventArgs e)
+        {
+            Environment.Exit(0);
+        }
+        #endregion
     }
 }
