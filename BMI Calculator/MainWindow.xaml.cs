@@ -12,23 +12,36 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Xml.Serialization;
 
-namespace BMI_Calculator
+namespace BMI_Calc
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
+    
+    [XmlRoot("BMI Calc", Namespace = "www.bmicalc.ninja")]
     public partial class MainWindow : Window
     {
 
+        public string FilePath = "C:/Temp/";
+        public string FileName = "yourBMI.xml";
+
         public class Customer
         {
+            [XmlAttribute("Last Name")]
             public string lastName { get; set; }
+            [XmlAttribute("First Name")]
             public string firstName { get; set; }
+            [XmlAttribute("Phone Number")]
             public string phoneNumber { get; set; }
+            [XmlAttribute("Height")]
             public int heightInches { get; set; }
+            [XmlAttribute("Weight")]
             public int weightLbs { get; set; }
+            [XmlAttribute("Customer BMI")]
             public int custBMI { get; set; }
+            [XmlAttribute("Status")]
             public string statusTitle { get; set; }
         }
 
